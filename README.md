@@ -6,7 +6,7 @@
 
 1. Сервис [Книг](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/src/main/java/ru/gb/myspringdemo/service/BookService.java) 
 позволяет регистрировать в системе новые книги, удалять, выводить информацию о конкретной книге, или весь список книг;
-2. Сервис [Читатаелей](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/src/main/java/ru/gb/myspringdemo/service/ReaderService.java) -
+2. Сервис [Читателей](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/src/main/java/ru/gb/myspringdemo/service/ReaderService.java) -
 регистрировать в системе новых пользователей, удалять, выводить информацию о конкретном читателе, или весь список зарегистрированных клиентов библиотеки;
 3. [Сервис выдач книг](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/src/main/java/ru/gb/myspringdemo/service/IssueService.java) 
 позволяет регистрировать факт выдачи книги читателю и её возврат, выводить информацию о выданных книгах конкретному клиенту, или весь список выданных книг;
