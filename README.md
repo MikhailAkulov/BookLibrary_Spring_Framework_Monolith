@@ -38,25 +38,72 @@
 ---
 ### Запуск:
 1. Точка входа: [Application](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/src/main/java/ru/gb/myspringdemo/Application.java)
+
+
 2. Файл [TestDataGenerator](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/src/main/java/ru/gb/myspringdemo/TestDataGenerator.java)
 создан ради удобства демонстрации функционала сервиса, при запуске программы он регистрирует в системе:
     * 5 книг,
     * 5 читателей,
     * по 2 факта выдачи книг каждому читателю.
    
-   **P.S.: Код внутри данного файла может быть закомментирован для проведения тестов.**
+   **P.S.: Код внутри данного файла нужно закомментировать на время проведения тестов.**
 
-3. С документацией `Swagger'а` можно ознакомиться по стандартной ссылке: http://localhost:8080/swagger-ui/index.html,
-а спецификация OAS - по адресу: http://localhost:8080/v3/api-docs;
-4. `Пользовательский интерфейс` >>> http://localhost:8080/ui - начальная страница открыта для всех пользователей;
-   * `/ui/issues/**").hasAuthority("admin")` login/password: *admin/admin*
-   * `/ui/readers/**").hasAuthority("reader")` login/password: *reader/reader*
-   * `/ui/books/**").authenticated()` login/password: *auth/auth*
-5. `Книжный сервис` >>> http://localhost:8080/book;
-6. `Сервис читателей` >>> http://localhost:8080/reader;
-7. `Сервис выдач` >>> http://localhost:8080/issue;
 
+3. Посмотреть документацию `Swagger'а`: http://localhost:8080/swagger-ui/index.html
+   
+   или этот [скриношот](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/image/openApiDefinitionFullScreenshot.png)
+
+   спецификация OAS: http://localhost:8080/v3/api-docs, либо [скриншот](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/image/oasFullScreenshot.png);
+
+
+4. **Пользовательский интерфейс** содержит:
+
+   * `Домашнюю страницу` со списком доступных функций: http://localhost:8080/ui
+   
+   открыта всем пользователям, ссылки кликабельные (кроме нижней), но **доступ ограничен**
+
+   ![homePage](image/homePage.png)
+
+   * `Стриницу со списком доступных книг`: http://localhost:8080/ui/books
+   
+   необходима аутентификация (login/password: *auth/auth*)
+
+   ![allBooks](image/allBooks.png)
+
+   * `Страницу со списком зарегистрированных читателей`: http://localhost:8080/ui/readers
+
+   необходима авторизация как читатель, или админ (login/password: *reader/reader*)
+
+   ![allReaders](image/allReaders.png)
+   
+   * `Страницу со списком всех зарегистрированных выдач/возвратов книг читателям(и)`: http://localhost:8080/ui/issues 
+   
+   необходима авторизация как админ (login/password: *admin/admin*)
+
+   ![issuanceTable](image/issuanceTable.png)
+
+   * `Страницу со списком книг, выданных конкретному читателю`: http://localhost:8080/ui/reader/{id}
+
+   необходима авторизация как читатель, или админ (login/password: *admin/admin*)
+
+   ![reader'sListOfBooks](image/reader'sListOfBooks.png)
+
+   P.S.: Есть задумка данную страницу сделать своего рода личным кабинетом пользователя, доступным ему после авторизации, либо для администратора в виде "личной карточки" читателя.
+
+5. Вывод основных сервисов реализован без шаблонизатора и возвращает JSON:
+
+   `Книжный сервис`: http://localhost:8080/book;
+
+   ![book](image/book.png)
+   
+   `Сервис читателей` >>> http://localhost:8080/reader;
+
+   ![reader](image/reader.png)
+   
+   `Сервис выдач` >>> http://localhost:8080/issue;
+
+   ![issue](image/issue.png)
+   
 ---
 
-Стек: Spring Boot, Spring Data JPA, Spring Web, Spring WebFlux, Spring Security, Spring AOP, OpenAPI 3, REST API, H2, 
-Lombok, Thymeleaf, Swagger.
+#### Стек: Spring Boot, Spring Data JPA, Spring Web, Spring WebFlux, Spring Security, Spring AOP, OpenAPI 3, REST API, H2, Lombok, Thymeleaf, Swagger.
