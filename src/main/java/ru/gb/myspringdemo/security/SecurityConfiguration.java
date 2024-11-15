@@ -15,7 +15,7 @@ public class SecurityConfiguration {
         return httpSecurity
                 .authorizeHttpRequests(registry -> registry
                         .requestMatchers("/ui/issues/**").hasAuthority("admin")
-                        .requestMatchers("/ui/readers/**").hasAuthority("reader")
+                        .requestMatchers("/ui/readers/**").hasAnyAuthority("admin", "reader")
                         .requestMatchers("/ui/books/**").authenticated()
                         .requestMatchers("/ui/**").permitAll()
                         .anyRequest().permitAll()

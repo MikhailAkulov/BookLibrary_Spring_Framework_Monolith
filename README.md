@@ -48,7 +48,7 @@
 
 3. С документацией `Swagger'а` можно ознакомиться по стандартной ссылке: http://localhost:8080/swagger-ui/index.html,
 а спецификация OAS - по адресу: http://localhost:8080/v3/api-docs;
-4. `Пользовательский интерфейс` >>> http://localhost:8080/ui - этот адрес открыт для всех потльзователей;
+4. `Пользовательский интерфейс` >>> http://localhost:8080/ui - начальная страница открыта для всех пользователей;
    * `/ui/issues/**").hasAuthority("admin")` login/password: *admin/admin*
    * `/ui/readers/**").hasAuthority("reader")` login/password: *reader/reader*
    * `/ui/books/**").authenticated()` login/password: *auth/auth*
@@ -58,4 +58,5 @@
 
 ---
 
-Стек: Spring Boot, Spring Data JPA, Spring Web, Spring WebFlux, Spring Security, Spring AOP, OpenAPI 3, REST API, H2, Lombok, Thymeleaf, Swagger.
+Стек: Spring Boot, Spring Data JPA, Spring Web, Spring WebFlux, Spring Security, Spring AOP, OpenAPI 3, REST API, H2, 
+Lombok, Thymeleaf, Swagger.
