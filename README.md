@@ -51,7 +51,7 @@
 
 3. Посмотреть документацию `Swagger'а`: http://localhost:8080/swagger-ui/index.html
    
-   или этот [скриношот](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/image/openApiDefinitionFullScreenshot.png)
+   или этот [скриншот](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/image/openApiDefinitionFullScreenshot.png)
 
    спецификация OAS: http://localhost:8080/v3/api-docs, либо [скриншот](https://github.com/MikhailAkulov/BookLibrary_Spring_Framework_Monolith/blob/main/image/oasFullScreenshot.png);
 
